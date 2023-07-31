@@ -1,0 +1,109 @@
+/**
+ * Concord CRM - https://www.concordcrm.com
+ *
+ * @version   1.2.2
+ *
+ * @link      Releases - https://www.concordcrm.com/releases
+ * @link      Terms Of Service - https://www.concordcrm.com/terms
+ *
+ * @copyright Copyright (c) 2022-2023 KONKORD DIGITAL
+ */
+/* Tables  */
+@layer components {
+  .table-primary {
+    @apply min-w-full divide-y divide-neutral-200 dark:divide-neutral-800;
+  }
+
+  .table-primary > thead,
+  .table-primary > thead th {
+    @apply bg-neutral-50 dark:bg-neutral-700;
+  }
+
+  .table-primary > thead > tr > th {
+    @apply border-y border-neutral-200 px-6 py-3 text-xs font-semibold uppercase tracking-wider text-neutral-700 dark:border-neutral-800 dark:text-neutral-100;
+  }
+
+  table.table-condensed > thead > tr > th {
+    @apply px-2 py-2.5;
+  }
+
+  .table-sticky-header .table-primary > thead > tr > th {
+    @apply bg-opacity-75 backdrop-blur backdrop-filter;
+  }
+
+  .table-primary > tbody {
+    @apply bg-white dark:bg-neutral-900;
+  }
+
+  .table-primary > tbody > tr {
+    @apply bg-white dark:bg-neutral-900;
+  }
+
+  .table-primary > tbody > tr:not(:last-child) td {
+    @apply border-b border-neutral-200 dark:border-neutral-800;
+  }
+
+  .table-primary > tbody > tr > td {
+    @apply bg-white px-6 py-4 text-sm font-medium text-neutral-800 dark:bg-neutral-900 dark:text-neutral-200;
+  }
+
+  table.table-condensed > tbody > tr > td {
+    @apply px-2 py-1.5;
+  }
+
+  table.table-condensed > tbody > tr > td .link {
+    @apply text-neutral-700 hover:text-neutral-800 dark:text-neutral-200 dark:hover:text-neutral-300;
+  }
+
+  .table-responsive {
+    @apply touch-auto overflow-x-auto;
+  }
+
+  .table-sticky-header {
+    @apply max-h-80 overflow-y-auto;
+  }
+
+  .table-sticky-header table > thead > tr > th {
+    @apply sticky top-0 z-10;
+  }
+
+  .table-sticky-header table > tbody > tr > .table-sticky-column,
+  .table-responsive table > tbody > tr > .table-sticky-column,
+  .table-sticky-header table > tfoot > tr > .table-sticky-column,
+  .table-responsive table > tfoot > tr > .table-sticky-column {
+    @apply relative lg:sticky lg:left-0;
+  }
+
+  .table-sticky-header table > thead > tr > .table-sticky-column,
+  .table-responsive table > thead > tr > .table-sticky-column {
+    @apply lg:sticky lg:left-0;
+  }
+
+  .table-sticky-header table > thead > tr > .table-sticky-column,
+  .table-responsive table > thead > tr > .table-sticky-column {
+    @apply z-20;
+  }
+
+  .table-sticky-header table > tbody > tr > .table-sticky-column,
+  .table-responsive table > tbody > tr > .table-sticky-column,
+  .table-sticky-header table > tfoot > tr > .table-sticky-column,
+  .table-responsive table > tfoot > tr > .table-sticky-column {
+    @apply z-10;
+  }
+
+  tr.has-warning > td:first-child:after,
+  tr.has-warning > td:first-child:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: auto;
+    height: 100%;
+    top: 0;
+    border-left: 3px solid transparent;
+  }
+
+  tr.has-warning.warning-confirmed > td:first-child:before,
+  tr.has-warning.warning-confirmed > td:first-child:after {
+    border-left: 3px solid rgba(var(--color-danger-500), 1);
+  }
+}

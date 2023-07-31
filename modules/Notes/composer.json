@@ -1,0 +1,17 @@
+{
+    "name": "concordcrm/notes",
+    "description": "",
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Notes\\": ""
+        }
+    }
+}
