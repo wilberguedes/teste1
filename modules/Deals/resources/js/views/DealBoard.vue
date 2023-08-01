@@ -220,6 +220,10 @@
         </template>
 
         <template #card="{ card }">
+ <div v-if="card.cf_whatsapp">
+								<i-button @click="goToWhats(card.cf_whatsapp)" icon="whatsapp" size="sm">WhatsApp</i-button>
+							</div>
+
           <DealBoardCard
             :deal-id="card.id"
             :display-name="card.display_name"
